@@ -1,0 +1,54 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+}
+
+header {
+    background: #1f4e79;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    gap: 15px;
+    padding: 20px;
+    /* MOBILE FIRST: 1 column by default */
+    grid-template-columns: 1fr;
+}
+
+.box {
+    padding: 30px;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    background: tomato;     /* mobile color */
+}
+
+.device-label::after {
+    content: "Mobile view (1 column)";
+}
+
+/* ---------- Tablet : 600px and up ---------- */
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .box { background: darkorange; }
+    .device-label::after { content: "Tablet view (2 columns)"; }
+}
+
+/* ---------- Desktop : 992px and up ---------- */
+@media (min-width: 992px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .box { background: seagreen; }
+    .device-label::after { content: "Desktop view (4 columns)"; }
+}

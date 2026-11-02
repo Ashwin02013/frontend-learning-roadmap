@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    padding: 20px;
+}
+
+.card {
+    width: 250px;
+    height: 150px;
+    padding: 20px;
+    border: 5px solid #1f4e79;
+    margin: 30px;
+    background: #fff;
+}
+
+/* content-box: width 250 + padding 40 + border 10 = 300px total */
+.content-box {
+    box-sizing: content-box;
+}
+
+/* border-box: width 250 includes padding and border = 250px total */
+.border-box {
+    box-sizing: border-box;
+}
+
+.margin-demo {
+    background: lightsalmon;
+    margin: 10px 10px 10px 100px;
+    padding: 10px;
+    border: 2px dashed brown;
+    width: 200px;
+}

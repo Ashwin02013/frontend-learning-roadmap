@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    height: 1500px; /* tall page so sticky/fixed can be seen while scrolling */
+}
+
+h2 { margin-top: 30px; }
+
+/* ---------- display ---------- */
+.block-demo  { display: block;        background: lightblue;  padding: 8px; }
+.inline-demo { display: inline;       background: lightgreen; padding: 8px; }
+.ib-demo     { display: inline-block; background: khaki; padding: 8px; width: 120px; height: 40px; }
+.hidden-demo { display: none; }
+
+/* ---------- position ---------- */
+.parent {
+    position: relative;
+    height: 150px;
+    background: #ddd;
+    border: 2px solid #555;
+}
+
+.relative-box {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background: orange;
+    width: 120px;
+    padding: 8px;
+}
+
+.absolute-box {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: tomato;
+    color: #fff;
+    padding: 8px;
+}
+
+.fixed-box {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #1f4e79;
+    color: #fff;
+    padding: 10px;
+}
+
+.sticky-box {
+    position: sticky;
+    top: 0;
+    background: gold;
+    padding: 10px;
+}

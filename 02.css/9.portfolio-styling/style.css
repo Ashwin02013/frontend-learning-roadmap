@@ -1,0 +1,214 @@
+/* ===== Reset and base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background: #f4f7fb;
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section h2 {
+    color: #1f4e79;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ===== Header and navbar (flexbox + sticky) ===== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #1f4e79;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    color: #fff;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd166;
+    border-bottom-color: #ffd166;
+}
+
+/* ===== Home / hero ===== */
+#home {
+    max-width: none;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #1f4e79, #4a90d9);
+}
+
+#home h2 {
+    color: #fff;
+    font-size: 44px;
+}
+
+#home p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #ffd166;
+    color: #1f4e79;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== About ===== */
+#about p {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* ===== Skills ===== */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+}
+
+.skill-list li {
+    padding: 10px 25px;
+    background: #fff;
+    border: 2px solid #2e75b6;
+    border-radius: 30px;
+    color: #1f4e79;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.skill-list li:hover {
+    background: #2e75b6;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* ===== Projects (grid) ===== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+article {
+    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+article h3 {
+    color: #2e75b6;
+    margin-bottom: 8px;
+}
+
+/* ===== Contact ===== */
+#contact {
+    text-align: center;
+}
+
+#contact a {
+    color: #2e75b6;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #1f4e79;
+    color: #fff;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 992px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #home h2 { font-size: 30px; }
+
+    section { padding: 50px 15px; }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}

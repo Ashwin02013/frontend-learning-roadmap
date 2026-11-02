@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xaasio Registeration</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+
+    <form action="#" method="post">
+        <!--# nowhere redirected for now , will be redirectred to a server-->
+        <p>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </p>
+
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </p>
+
+        <p>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" minlength="6" required>
+        </p>
+
+        <p>
+            <label for="mobile">Mobile:</label><br>
+            <!--the mobile number should be of only 10numbers and numbers should be between 0 and 9-->
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="10 digit number">
+        </p>
+
+        <p>
+            Gender:<br>
+            <!--radio button looks like a circle checkbox-->
+            <input type="radio" id="Male" name="gender" value="male">
+            <label for="Male">Male</label>
+            <!--since both id and label for id can be 2 for female , so clicking both the word and id will get it checked , but id starting with number is awkward-->
+            <input type="radio" id="Female" name="gender" value="female">
+            <label for="Female">Female</label>
+            <!--in the following the id is other1 and label for other is other ; so clicking the word other will not check the box, only clicking inside the checkbox gets it checked-->
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </p>
+
+        <p>
+            Skills:<br>
+            <input type="checkbox" id="html" name="skills" value="html">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="skills" value="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="js" name="skills" value="js">
+            <label for="js">JavaScript</label>
+        </p>
+
+        <p>
+            <label for="course">Course:</label><br>
+            <select id="course" name="course">
+                <!--<option value = ""disabled selected>--select -- </option> can be used - it makes it unselectable-->
+                <option value="">-- Select --</option>
+                <option value="frontend">Frontend</option>
+                <option value="backend">Backend</option>
+                <option value="fullstack">Full Stack</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="40" placeholder="Write something..."></textarea>
+        </p>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>

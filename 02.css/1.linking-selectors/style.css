@@ -1,0 +1,21 @@
+/* External CSS - linked with <link rel="stylesheet"> */
+
+/* Element selector */
+h1 {
+    color: darkblue;
+}
+
+/* Class selector */
+.highlight {
+    background-color: yellow;
+}
+
+/* Id selector */
+#main-title {
+    text-align: center;
+}
+
+/* Group selector */
+h2, h3 {
+    color: teal;
+}

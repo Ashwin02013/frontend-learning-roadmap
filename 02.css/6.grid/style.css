@@ -1,0 +1,62 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f4f7fb;
+}
+
+h2 { color: #1f4e79; }
+
+.box {
+    background: #2e75b6;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+/* ---------- 2 column grid ---------- */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* ---------- 3 column grid ---------- */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* ---------- Responsive grid (auto-fit) ---------- */
+.grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+/* ---------- Page layout with grid areas ---------- */
+.layout {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+    gap: 15px;
+}
+.layout .header  { grid-area: header;  background: #1f4e79; }
+.layout .sidebar { grid-area: sidebar; background: #4a90d9; }
+.layout .content { grid-area: content; background: #2e75b6; }
+.layout .footer  { grid-area: footer;  background: #1f4e79; }
+
+/* On small screens the 3 column grid becomes 1 column */
+@media (max-width: 600px) {
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}

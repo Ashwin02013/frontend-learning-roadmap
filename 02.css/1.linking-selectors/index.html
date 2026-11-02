@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Task 1 - Linking and Selectors</title>
+
+    <!-- 1. External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 2. Internal CSS -->
+    <style>
+        p {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">CSS Linking and Selectors</h1>
+
+    <h2>Group selector (h2, h3)</h2>
+    <h3>This h3 has the same color as h2</h3>
+
+    <p>This paragraph is styled by the internal CSS (element selector p).</p>
+    <p class="highlight">This paragraph uses the class selector .highlight</p>
+
+    <!-- 3. Inline CSS -->
+    <p style="color: crimson; font-weight: bold;">This paragraph is styled by inline CSS.</p>
+</body>
+</html>
