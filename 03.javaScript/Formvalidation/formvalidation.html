@@ -1,0 +1,19 @@
+<input id="username" placeholder="Name"><p id="e1"></p>
+<input id="email" placeholder="Email"><p id="e2"></p>
+<input id="mobile" placeholder="Mobile"><p id="e3"></p>
+<input id="pass" type="password" placeholder="Password"><p id="e4"></p>
+<input id="cpass" type="password" placeholder="Confirm Password"><p id="e5"></p>
+<button onclick="register()">Register</button>
+
+<script>
+  function register() {
+    e1.textContent = username.value.length < 3 ? "Name must be at least 3 characters" : "";
+    e2.textContent = /^\S+@\S+\.\S+$/.test(email.value) ? "" : "Enter a valid email";
+    e3.textContent = /^[6-9]\d{9}$/.test(mobile.value) ? "" : "Mobile must be 10 digits, starting with 6-9";
+    e4.textContent = pass.value.length < 6 ? "Password must be at least 6 characters" : "";
+    e5.textContent = cpass.value === pass.value && cpass.value ? "" : "Passwords do not match";
+
+    if (e1.textContent + e2.textContent + e3.textContent + e4.textContent + e5.textContent === "")
+      alert("Registered!");
+  }
+</script>
