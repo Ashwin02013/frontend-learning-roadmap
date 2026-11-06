@@ -1,0 +1,23 @@
+<button onclick="starttimer()">start</button>
+<button onclick="stoptimer()">stop</button>
+
+
+<script>
+
+    let timeoutId;
+
+    function starttimer(){
+        timeoutId = setTimeout(()=>window.alert("3 second done"),3000);
+        console.log("started")
+    }
+    function stoptimer(){
+        clearTimeout(timeoutId);
+        console.log("cleared")
+    }
+    
+</script>
+
+
+
+
+
