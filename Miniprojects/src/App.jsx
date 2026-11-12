@@ -4,6 +4,7 @@ import Counter from "./components/Counter";
 import Todo from "./components/Todo";
 import ExpenseTracker from "./components/Expensetracker";
 import UserDirectory from "./components/UserDirectory";
+import MiniDashboard from "./components/MiniDashboard";
 
 const projects = [
   { id: 1, name: "Card" },
@@ -11,6 +12,7 @@ const projects = [
   { id: 3, name: "Todo" },
   { id: 4, name: "Expense Tracker" },
   { id: 5, name: "User Directory" },
+  { id: 6, name: "Mini Dashboard" },
 ];
 
 export default function App() {
@@ -35,6 +37,7 @@ export default function App() {
       {active === "Todo" && <Todo />}
       {active === "Expense Tracker" && <ExpenseTracker />}
       {active === "User Directory" && <UserDirectory />}
+      {active === "Mini Dashboard" && <MiniDashboard />}
     </>
   );
 }
